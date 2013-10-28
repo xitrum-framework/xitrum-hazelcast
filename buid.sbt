@@ -1,6 +1,6 @@
 organization := "tv.cntt"
 
-name := "xitrum-cache-hazelcast"
+name := "xitrum-hazelcast"
 
 version := "1.0-SNAPSHOT"
 

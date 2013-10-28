@@ -9,7 +9,7 @@ class HazelcastSessionStore extends ServerSessionStore {
   // iterating through a big map as much as we can. Another reason is that the
   // application may need to config Hazelcast to persist sessions to a place
   // (disk, DB etc.) different to those for other things (cache, comet etc.).
-  private[this] val store = Config.hazelcastInstance.getMap("xitrum/session").asInstanceOf[IMap[String, Map[String, Any]]]
+  private[this] val store = Hz.instance.getMap("xitrum/session").asInstanceOf[IMap[String, Map[String, Any]]]
 
   def get(sessionId: String): Option[Map[String, Any]] = Option(store.get(sessionId))
 
