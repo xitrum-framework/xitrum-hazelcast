@@ -27,6 +27,10 @@ To use Hazelcast as the cache engine in your Xitrum project, edit xitrum.conf:
     cache {
       engine   = xitrum.hazelcast.Cache
       maxElems = 100000
+
+      # clusterMember: hazelcast_cluster_member.xml is used
+      # javaClient:    hazelcast_java_client.properties is used
+      hazelcastMode = clusterMember
     }
     ...
   }
@@ -42,6 +46,10 @@ To use Hazelcast as the session store in your Xitrum project, edit xitrum.conf:
     ...
     session {
       engine = xitrum.hazelcast.Session
+
+      # clusterMember: hazelcast_cluster_member.xml is used
+      # javaClient:    hazelcast_java_client.properties is used
+      hazelcastMode = clusterMember
     }
     ...
   }
