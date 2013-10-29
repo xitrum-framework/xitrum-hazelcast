@@ -8,6 +8,8 @@ Hazelcast 2.x supports 3 modes: cluster member, lite member, and native client.
 But this module only supports cluster member or Java client mode, because
 "lite member" mode is removed in Hazelcast 3.x anyway.
 
+Read `Hazelcast doc about configuration <http://hazelcast.com/docs/2.6/manual/single_html/#Config>`_.
+
 Usage
 -----
 
