@@ -15,6 +15,8 @@ Add hazelcast_cluster_member.xml (if you use cluster member mode) or
 hazelcast_java_client.properties (if you use Java client mode) to the
 config directory of your Xitrum project.
 
+You can use both Hazelcast cache and session store, or only one.
+
 Hazelcast cache
 ~~~~~~~~~~~~~~~
 
@@ -25,12 +27,11 @@ To use Hazelcast as the cache engine in your Xitrum project, edit xitrum.conf:
   xitrum {
     ...
     cache {
-      engine   = xitrum.hazelcast.Cache
-      maxElems = 100000
-
-      # clusterMember: hazelcast_cluster_member.xml is used
-      # javaClient:    hazelcast_java_client.properties is used
-      hazelcastMode = clusterMember
+      "xitrum.hazelcast.Cache" {
+        # clusterMember: hazelcast_cluster_member.xml is used
+        # javaClient:    hazelcast_java_client.properties is used
+        mode = clusterMember
+      }
     }
     ...
   }
@@ -45,11 +46,13 @@ To use Hazelcast as the session store in your Xitrum project, edit xitrum.conf:
   xitrum {
     ...
     session {
-      engine = xitrum.hazelcast.Session
-
-      # clusterMember: hazelcast_cluster_member.xml is used
-      # javaClient:    hazelcast_java_client.properties is used
-      hazelcastMode = clusterMember
+      store {
+        "xitrum.hazelcast.Session" {
+          # clusterMember: hazelcast_cluster_member.xml is used
+          # javaClient:    hazelcast_java_client.properties is used
+          mode = clusterMember
+        }
+      }
     }
     ...
   }
