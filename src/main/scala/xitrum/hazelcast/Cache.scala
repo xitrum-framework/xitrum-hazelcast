@@ -4,8 +4,8 @@ import java.util.concurrent.TimeUnit
 import com.hazelcast.core.{Hazelcast, IMap}
 import xitrum.{Cache => XitrumCache}
 
-class Cache(maxElems: Int) extends XitrumCache(maxElems) {
-  private val cache = Hz.instance.getMap("xitrum/cache").asInstanceOf[IMap[Any, Any]]
+class Cache extends XitrumCache {
+  private[this] val cache = Hz.instance.getMap("xitrum/cache").asInstanceOf[IMap[Any, Any]]
 
   def start() {}
 

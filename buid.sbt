@@ -2,7 +2,7 @@ organization := "tv.cntt"
 
 name := "xitrum-hazelcast"
 
-version := "1.0-SNAPSHOT"
+version := "1.1-SNAPSHOT"
 
 scalaVersion := "2.10.3"
 
@@ -18,11 +18,11 @@ javacOptions ++= Seq("-source", "1.6", "-target", "1.6")
 // and it takes several hours to sync from Sonatype to Maven Central
 resolvers += "SonatypeReleases" at "http://oss.sonatype.org/content/repositories/releases/"
 
-libraryDependencies += "tv.cntt" %% "xitrum" % "2.11-SNAPSHOT" % "provided"
+libraryDependencies += "tv.cntt" %% "xitrum" % "2.12" % "provided"
 
-libraryDependencies += "com.hazelcast" % "hazelcast" % "2.6.4"
+libraryDependencies += "com.hazelcast" % "hazelcast" % "2.6.5"
 
-libraryDependencies += "com.hazelcast" % "hazelcast-client" % "2.6.4"
+libraryDependencies += "com.hazelcast" % "hazelcast-client" % "2.6.5"
 
 //------------------------------------------------------------------------------
 
