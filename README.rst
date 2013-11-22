@@ -67,5 +67,9 @@ In the config directory, there are 2 sample config files:
 * hazelcast_cluster_member.xml: Use if you use Hazelcast cluster member mode
 * hazelcast_java_client.properties: Use if you use Hazelcast Java client mode
 
-Read `Hazelcast doc <http://hazelcast.com/docs.jsp>`_ to know about the modes above and
+Note that Xitrum instances in the same group (cluster) should have the same
+``<group>/<name>``. Hazelcast provides a monitor tool, ``<group>/<password>``
+is the password for the tool to connect to the group.
+
+Read `Hazelcast doc <http://hazelcast.com/docs.jsp>`_ to know more about the modes above and
 how to config them.
