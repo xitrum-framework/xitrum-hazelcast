@@ -1,5 +1,5 @@
 Optional module for `Xitrum <http://ngocdaothanh.github.io/xitrum/>`_
-to provide cache and session store, based on Hazelcast.
+to provide cache and session store, based on `Hazelcast <http://www.hazelcast.com/>`_.
 
 Usage
 -----
