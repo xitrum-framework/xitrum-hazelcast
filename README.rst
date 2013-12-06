@@ -1,14 +1,26 @@
 Optional module for `Xitrum <http://ngocdaothanh.github.io/xitrum/>`_
 to provide cache and session store, based on `Hazelcast <http://www.hazelcast.com/>`_.
 
-Usage
------
+Both Hazelcast 2.x and 3.x are supported.
 
-Add dependency to your project:
+See CHANGELOG for info about specific Xitrum and Hazelcast versions.
+
+Configure SBT
+-------------
+
+Add dependency to your SBT project:
+
+Hazelcast 2:
 
 ::
 
-  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast" % "1.0"
+  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast2" % "1.1"
+
+Hazelcast 3:
+
+::
+
+  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast3" % "1.1"
 
 You can use Hazelcast for Xitrum cache or Xitrum session store.
 
@@ -52,15 +64,17 @@ To use Hazelcast as the session store in your Xitrum project, edit xitrum.conf:
     ...
   }
 
-Config Hazelcast
-----------------
+Configure Hazelcast
+-------------------
 
-Above is the config for Xitrum. This section discusses about configuring Hazelcast itself.
+Above is the config for Xitrum. This section instructs about configuring
+Hazelcast itself.
 
 In the config directory, there are 2 sample config files:
 
 * hazelcast_cluster_member.xml: Use if you use Hazelcast cluster member mode
-* hazelcast_java_client.properties: Use if you use Hazelcast Java client mode
+* hazelcast_java_client.properties (Hazelcast 2) or hazelcast_java_client (Hazelcast 3):
+  Use if you use Hazelcast Java client mode
 
 Copy the file that you need to the config directory of your Xitrum project.
 
@@ -68,20 +82,9 @@ Note that Xitrum instances in the same group (cluster) should have the same
 ``<group>/<name>``. Hazelcast provides a monitor tool, ``<group>/<password>``
 is the password for the tool to connect to the group.
 
-Read `Hazelcast doc <http://hazelcast.com/docs.jsp>`_ to know more about the modes above and
-how to config them.
-
-Version
--------
-
-Hazelcast 2.x is used at this moment, instead of latest 3.x, because 3.x is still
-not as stable as 2.x.
+Read `Hazelcast doc <http://www.hazelcast.com/docs.jsp>`_ to know more about the
+modes above and how to configure them.
 
 Hazelcast 2.x supports 3 modes: cluster member, lite member, and native client.
-But this module only supports cluster member or Java client mode, because
-"lite member" mode is removed in Hazelcast 3.x anyway.
-
-xitrum-hazelcast 1.0:
-
-* Xitrum 1.12
-* Hazelcast 2.6.5
+But because "lite member" mode is removed in Hazelcast 3.x, xitrum-hazelcast
+only supports cluster member and Java client modes.
