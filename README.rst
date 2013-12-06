@@ -78,13 +78,11 @@ In the config directory, there are 2 sample config files:
 
 Copy the file that you need to the config directory of your Xitrum project.
 
-Note that Xitrum instances in the same group (cluster) should have the same
-``<group>/<name>``. Hazelcast provides a monitor tool, ``<group>/<password>``
-is the password for the tool to connect to the group.
-
-Read `Hazelcast doc <http://www.hazelcast.com/docs.jsp>`_ to know more about the
-modes above and how to configure them.
+Xitrum instances in the same cluster should have the same ``<group>/<name>``.
+Hazelcast provides `a tool <http://www.hazelcast.com/mancenter.jsp>`_ to easily
+monitor your cluster.
 
 Hazelcast 2.x supports 3 modes: cluster member, lite member, and native client.
 But because "lite member" mode is removed in Hazelcast 3.x, xitrum-hazelcast
-only supports cluster member and Java client modes.
+only supports cluster member and Java client modes. Read `Hazelcast doc <http://www.hazelcast.com/docs.jsp>`_
+to know more about the modes above and how to configure them.
