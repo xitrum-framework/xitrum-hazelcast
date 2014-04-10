@@ -4,7 +4,7 @@ name := "xitrum-hazelcast2"
 
 version := "1.5-SNAPSHOT"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.10.4"
 
 scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked")
 
