@@ -19,12 +19,13 @@ class Cache extends XitrumCache {
 
   def get(key: Any) = Option(cache.get(key))
 
-  def put(key: Any, value: Any) { cache.put(key, value) }
+  // http://blog.hazelcast.com/2014/04/08/performance-top-5-1-map-put-vs-map-set/
+  def put(key: Any, value: Any) { cache.set(key, value) }
 
   def putIfAbsent(key: Any, value: Any) { cache.putIfAbsent(key, value) }
 
   def putSecond(key: Any, value: Any, seconds: Int) {
-    cache.put(key.toString, value, seconds, TimeUnit.SECONDS)
+    cache.set(key.toString, value, seconds, TimeUnit.SECONDS)
   }
 
   def putSecondIfAbsent(key: Any, value: Any, seconds: Int) {
@@ -35,4 +36,3 @@ class Cache extends XitrumCache {
 
   def clear() { cache.clear() }
 }
-

@@ -20,7 +20,8 @@ class HazelcastSessionStore extends ServerSessionStore {
   def get(sessionId: String): Option[Map[String, Any]] = Option(store.get(sessionId))
 
   def put(sessionId: String, immutableMap: Map[String, Any]) {
-    store.put(sessionId, immutableMap)
+    // http://blog.hazelcast.com/2014/04/08/performance-top-5-1-map-put-vs-map-set/
+    store.set(sessionId, immutableMap)
   }
 
   def remove(sessionId: String) {
