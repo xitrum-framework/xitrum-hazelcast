@@ -2,7 +2,7 @@ organization := "tv.cntt"
 
 name := "xitrum-hazelcast2"
 
-version := "1.5-SNAPSHOT"
+version := "1.6-SNAPSHOT"
 
 scalaVersion := "2.10.4"
 
@@ -17,9 +17,9 @@ resolvers += "SonatypeReleases" at "http://oss.sonatype.org/content/repositories
 
 libraryDependencies += "tv.cntt" %% "xitrum" % "3.5" % "provided"
 
-libraryDependencies += "com.hazelcast" % "hazelcast" % "2.6.7"
+libraryDependencies += "com.hazelcast" % "hazelcast" % "2.6.8"
 
-libraryDependencies += "com.hazelcast" % "hazelcast-client" % "2.6.7"
+libraryDependencies += "com.hazelcast" % "hazelcast-client" % "2.6.8"
 
 //------------------------------------------------------------------------------
 
