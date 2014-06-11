@@ -1,4 +1,4 @@
-Optional module for `Xitrum <http://xitrum-framework.github.io/xitrum/>`_
+Optional module for `Xitrum <http://xitrum-framework.github.io/>`_
 to provide cache and session store, based on `Hazelcast <http://www.hazelcast.com/>`_.
 
 Both Hazelcast 2.x and 3.x are supported.
