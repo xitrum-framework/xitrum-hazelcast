@@ -20,7 +20,7 @@ object Hz {
     System.setProperty("hazelcast.logging.type", "slf4j")
 
     if (mode == "clusterMember") {
-      val path = Config.root + File.separator + "config" + File.separator + "hazelcast_cluster_member.xml"
+      val path = xitrum.root + File.separator + "config" + File.separator + "hazelcast_cluster_member.xml"
       System.setProperty("hazelcast.config", path)
 
       // null: load from "hazelcast.config" system property above

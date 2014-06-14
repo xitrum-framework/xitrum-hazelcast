@@ -14,13 +14,13 @@ Hazelcast 2:
 
 ::
 
-  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast2" % "1.7"
+  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast2" % "1.8"
 
 Hazelcast 3:
 
 ::
 
-  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast3" % "1.7"
+  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast3" % "1.8"
 
 You can use Hazelcast for Xitrum cache or Xitrum session store.
 
