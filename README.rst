@@ -94,3 +94,13 @@ Hazelcast 2.x supports 3 modes: cluster member, lite member, and native client.
 But because "lite member" mode is removed in Hazelcast 3.x, xitrum-hazelcast
 only supports cluster member and Java client modes. Read `Hazelcast doc <http://www.hazelcast.com/docs.jsp>`_
 to know more about the modes above and how to configure them.
+
+Configure log
+-------------
+
+You may want to add this line to file config/logback.xml in your Xitrum project,
+to avoid noisy Hazelcast log:
+
+::
+
+  <logger name="com.hazelcast" level="INFO"/>
