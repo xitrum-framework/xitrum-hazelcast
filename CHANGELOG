@@ -1,10 +1,11 @@
-* 1.9: Xitrum 3.14, Hazelcast versions are freely specified by the project that uses xitrum-hazelcast
-* 1.8: Xitrum 3.14, Hazelcast 2.6.9 and 3.3-EA
-* 1.7: Xitrum 3.13, Hazelcast 2.6.8 and 3.3-EA
-* 1.6: Xitrum 3.11, Hazelcast 2.6.8 and 3.1.7
-* 1.5: Xitrum 3.6, Hazelcast 2.6.8 and 3.1.7
-* 1.4: Xitrum 3.5, Hazelcast 2.6.7 and 3.1.7
-* 1.3: Xitrum 3.2, Hazelcast 2.6.7 and 3.1.6
-* 1.2: Xitrum 3.0, Hazelcast 2.6.6 and 3.1.5
-* 1.1: Xitrum 2.13, Hazelcast 2.6.5 and 3.1.3
-* 1.0: Xitrum 2.12, Hazelcast 2.6.5
+* 1.10: Xitrum 3.17
+* 1.9:  Xitrum 3.14, Hazelcast versions are freely specified by the project that uses xitrum-hazelcast
+* 1.8:  Xitrum 3.14, Hazelcast 2.6.9 and 3.3-EA
+* 1.7:  Xitrum 3.13, Hazelcast 2.6.8 and 3.3-EA
+* 1.6:  Xitrum 3.11, Hazelcast 2.6.8 and 3.1.7
+* 1.5:  Xitrum 3.6,  Hazelcast 2.6.8 and 3.1.7
+* 1.4:  Xitrum 3.5,  Hazelcast 2.6.7 and 3.1.7
+* 1.3:  Xitrum 3.2,  Hazelcast 2.6.7 and 3.1.6
+* 1.2:  Xitrum 3.0,  Hazelcast 2.6.6 and 3.1.5
+* 1.1:  Xitrum 2.13, Hazelcast 2.6.5 and 3.1.3
+* 1.0:  Xitrum 2.12, Hazelcast 2.6.5
