@@ -5,7 +5,8 @@ import com.hazelcast.core.{Hazelcast, IMap}
 import xitrum.{Cache => XitrumCache}
 
 class Cache extends XitrumCache {
-  private[this] val cache = Hz.instance.getMap("xitrum/cache").asInstanceOf[IMap[Any, Any]]
+  // lazy: see comment at Hz.instance
+  private[this] lazy val cache = Hz.instance.getMap("xitrum/cache").asInstanceOf[IMap[Any, Any]]
 
   def start() {}
 

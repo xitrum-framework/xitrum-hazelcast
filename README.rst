@@ -18,7 +18,7 @@ Hazelcast 2:
 
   libraryDependencies += "com.hazelcast" % "hazelcast-client" % "2.6.9"
 
-  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast2" % "1.10"
+  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast2" % "1.11"
 
 Hazelcast 3:
 
@@ -28,7 +28,7 @@ Hazelcast 3:
 
   libraryDependencies += "com.hazelcast" % "hazelcast-client" % "3.2.5"
 
-  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast3" % "1.10"
+  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast3" % "1.11"
 
 You can use Hazelcast for Xitrum cache or Xitrum session store.
 
@@ -41,13 +41,11 @@ To use Hazelcast as the cache engine in your Xitrum project, edit xitrum.conf:
 
   xitrum {
     ...
-    cache {
-      "xitrum.hazelcast.Cache" {
-        # clusterMember: hazelcast_cluster_member.xml is used
-        # javaClient:    hazelcast_java_client.properties is used
-        mode = clusterMember
-      }
-    }
+    # clusterMember: hazelcast_cluster_member.xml is used
+    # javaClient:    hazelcast_java_client.properties is used
+    hazelcastMode = clusterMember
+
+    cache = xitrum.hazelcast.Cache
     ...
   }
 
@@ -60,14 +58,13 @@ To use Hazelcast as the session store in your Xitrum project, edit xitrum.conf:
 
   xitrum {
     ...
+    # clusterMember: hazelcast_cluster_member.xml is used
+    # javaClient:    hazelcast_java_client.properties is used
+    hazelcastMode = clusterMember
+
     session {
-      store {
-        "xitrum.hazelcast.Session" {
-          # clusterMember: hazelcast_cluster_member.xml is used
-          # javaClient:    hazelcast_java_client.properties is used
-          mode = clusterMember
-        }
-      }
+      store = xitrum.hazelcast.Session
+      ...
     }
     ...
   }

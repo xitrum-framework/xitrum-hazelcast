@@ -1,3 +1,4 @@
+* 1.11: Fix code to match README
 * 1.10: Xitrum 3.17
 * 1.9:  Xitrum 3.14, Hazelcast versions are freely specified by the project that uses xitrum-hazelcast
 * 1.8:  Xitrum 3.14, Hazelcast 2.6.9 and 3.3-EA

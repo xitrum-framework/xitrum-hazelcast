@@ -9,16 +9,14 @@ import com.hazelcast.core.{Hazelcast, HazelcastInstance}
 import xitrum.Config
 
 object Hz {
-  /**
-   * Use lazy to avoid starting Hazelcast if it is not used.
-   * Starting Hazelcast takes several seconds, sometimes we want to work in
-   * sbt console mode and don't like this overhead.
-   */
-  val instance: HazelcastInstance = {
-    val mode = Config.xitrum.config.getString("cache.hazelcastMode")
+  // http://hazelcast.org/docs/3.2/manual/html/logging.html
+  System.setProperty("hazelcast.logging.type", "slf4j")
 
-    // http://www.hazelcast.com/docs/3.0/manual/multi_html/ch12s07.html
-    System.setProperty("hazelcast.logging.type", "slf4j")
+  // Use lazy to avoid starting Hazelcast if it is not used.
+  // Starting Hazelcast takes several seconds, sometimes we want to work in
+  // SBT console and don't touch Hazelcast, thus don't like this overhead.
+  lazy val instance: HazelcastInstance = {
+    val mode = Config.xitrum.config.getString("hazelcastMode")
 
     if (mode == "clusterMember") {
       val path = xitrum.root + File.separator + "config" + File.separator + "hazelcast_cluster_member.xml"
