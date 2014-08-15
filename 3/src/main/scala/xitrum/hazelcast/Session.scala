@@ -1,10 +1,9 @@
 package xitrum.hazelcast
 
 import com.hazelcast.core.{Hazelcast, IMap}
-
 import xitrum.scope.session.ServerSessionStore
 
-class HazelcastSessionStore extends ServerSessionStore {
+class Session extends ServerSessionStore {
   // We can use Cache, but we use a separate Hazelcast map to avoid the cost of
   // iterating through a big map as much as we can. Another reason is that the
   // application may need to config Hazelcast to persist sessions to a place
