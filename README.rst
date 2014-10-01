@@ -24,9 +24,9 @@ Hazelcast 3:
 
 ::
 
-  libraryDependencies += "com.hazelcast" % "hazelcast" % "3.2.5"
+  libraryDependencies += "com.hazelcast" % "hazelcast" % "3.3.1"
 
-  libraryDependencies += "com.hazelcast" % "hazelcast-client" % "3.2.5"
+  libraryDependencies += "com.hazelcast" % "hazelcast-client" % "3.3.1"
 
   libraryDependencies += "tv.cntt" %% "xitrum-hazelcast3" % "1.11"
 
