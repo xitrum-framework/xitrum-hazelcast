@@ -9,7 +9,7 @@ import com.hazelcast.core.{Hazelcast, HazelcastInstance}
 import xitrum.Config
 
 object Hz {
-  // http://hazelcast.org/docs/3.2/manual/html/logging.html
+  // http://hazelcast.org/docs/3.3/manual/html/logging.html
   System.setProperty("hazelcast.logging.type", "slf4j")
 
   // Use lazy to avoid starting Hazelcast if it is not used.
@@ -23,7 +23,7 @@ object Hz {
       System.setProperty("hazelcast.config", path)
 
       // null: load from "hazelcast.config" system property above
-      // http://www.hazelcast.com/docs/3.0/manual/multi_html/ch12.html
+      // http://docs.hazelcast.org/docs/3.3/manual/html/config.html
       Hazelcast.newHazelcastInstance(null)
     } else {
       val clientConfig = new XmlClientConfigBuilder("hazelcast_java_client.xml").build()
