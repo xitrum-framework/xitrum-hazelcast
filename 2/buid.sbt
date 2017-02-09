@@ -4,21 +4,21 @@ name := "xitrum-hazelcast2"
 
 version := "1.13-SNAPSHOT"
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.12.1"
 //scalaVersion := "2.10.4"
 
-crossScalaVersions := Seq("2.11.5", "2.10.4")
+crossScalaVersions := Seq("2.12.1", "2.11.5")
 
 scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked")
 
-// Xitrum requires Java 7
-javacOptions ++= Seq("-source", "1.7", "-target", "1.7")
+// Xitrum requires Java 8
+javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
 // Most Scala projects are published to Sonatype, but Sonatype is not default
 // and it takes several hours to sync from Sonatype to Maven Central
 resolvers += "SonatypeReleases" at "http://oss.sonatype.org/content/repositories/releases/"
 
-libraryDependencies += "tv.cntt" %% "xitrum" % "3.22" % "provided"
+libraryDependencies += "tv.cntt" %% "xitrum" % "3.28.2" % "provided"
 
 libraryDependencies += "com.hazelcast" % "hazelcast" % "2.6.9" % "provided"
 
