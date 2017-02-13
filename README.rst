@@ -14,21 +14,18 @@ Hazelcast 2:
 
 ::
 
-  libraryDependencies += "com.hazelcast" % "hazelcast" % "2.6.9"
-
-  libraryDependencies += "com.hazelcast" % "hazelcast-client" % "2.6.9"
-
-  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast2" % "1.13"
+  libraryDependencies += "tv.cntt"       %% "xitrum-hazelcast2" % "1.14.0"
+  libraryDependencies += "com.hazelcast" %  "hazelcast"         % "2.6.9"
+  libraryDependencies += "com.hazelcast" %  "hazelcast-client"  % "2.6.9"
 
 Hazelcast 3:
 
 ::
 
-  libraryDependencies += "com.hazelcast" % "hazelcast" % "3.4"
+  libraryDependencies += "tv.cntt"       %% "xitrum-hazelcast3" % "1.14.0"
+  libraryDependencies += "com.hazelcast" %  "hazelcast"         % "3.7.5"
+  libraryDependencies += "com.hazelcast" %  "hazelcast-client"  % "3.7.5"
 
-  libraryDependencies += "com.hazelcast" % "hazelcast-client" % "3.4"
-
-  libraryDependencies += "tv.cntt" %% "xitrum-hazelcast3" % "1.13"
 
 You can use Hazelcast for Xitrum cache or Xitrum session store.
 
